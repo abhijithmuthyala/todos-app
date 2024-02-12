@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --blue-400: #3a7cfd;
+
+    --teal: #55ddff;
+    --pink: #c058f3;
+    --violet: #3710bd;
+    --purple: #a42395;
+
+    --white: #fff;
+
+    /* dark mode */
+    --primary: var(var(--blue-400));
+
+    --neutral-100: #171823;
+    --neutral-200: #25273d;
+    --neutral-300: #393a4b;
+    --neutral-400: #494c6b;
+    --neutral-500: #5b5e7e;
+    --neutral-600: #4d5067;
+    --neutral-700: #767992;
+    --neutral-800: #c8cbe7;
+    --neutral-900: #e3e4f1;
+
+    --bg-gradient-start-header: var(--violet);
+    --bg-gradient-end-header: var(--purple);
+
+    --bg-gradient-start-highlight: var(--teal);
+    --bg-gradient-end-highlight: var(--pink);
+  }
+}
