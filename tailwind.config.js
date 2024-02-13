@@ -20,12 +20,19 @@ module.exports = {
         900: "var(--neutral-900)",
       },
       white: "var(--white)",
+      transparent: "transparent",
+      inherit: "inherit",
     },
     gradientColorStops: {
       "header-start": "var(--bg-gradient-start-header)",
       "highlight-start": "var(--bg-gradient-start-highlight)",
       "header-end": "var(--bg-gradient-end-header)",
       "highlight-end": "var(--bg-gradient-end-highlight)",
+    },
+    extend: {
+      backgroundImage: {
+        hero: "hero",
+      },
     },
   },
   plugins: [],

@@ -33,3 +33,32 @@
     --bg-gradient-end-highlight: var(--pink);
   }
 }
+
+@layer utilities {
+  .bg-hero {
+    background-image: url("/images/hero.jpg"),
+      linear-gradient(
+        to bottom right,
+        var(--bg-gradient-start-header),
+        var(--bg-gradient-end-header)
+      );
+  }
+
+  .bg-select {
+    background-image: url("/tick.svg"),
+      linear-gradient(
+        to bottom right,
+        var(--bg-gradient-start-highlight),
+        var(--bg-gradient-end-highlight)
+      );
+  }
+
+  .bg-cross {
+    background-image: url("/plus.svg"),
+      linear-gradient(
+        to bottom right,
+        var(--bg-gradient-start-highlight),
+        var(--bg-gradient-end-highlight)
+      );
+  }
+}
