@@ -14,7 +14,7 @@
     --white: #fff;
 
     /* dark mode */
-    --primary: var(var(--blue-400));
+    --primary: var(--blue-400);
 
     --neutral-100: #171823;
     --neutral-200: #25273d;
