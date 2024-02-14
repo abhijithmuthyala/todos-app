@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+function withOpacity(opacity, variableName) {
+  return `rgba(var(--${variableName}), ${opacity})`;
+}
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
@@ -22,6 +27,9 @@ module.exports = {
       white: "var(--white)",
       transparent: "transparent",
       inherit: "inherit",
+      destructive({ opacityValue }) {
+        return withOpacity(opacityValue, "destructive-rgb");
+      },
     },
     gradientColorStops: {
       "header-start": "var(--bg-gradient-start-header)",
@@ -34,6 +42,9 @@ module.exports = {
     },
     fontFamily: {
       "josefin-sans": "var(--ff)",
+    },
+    transitionDuration: {
+      actions: "var(--actions-transition-time)",
     },
   },
   plugins: [],

@@ -10,6 +10,10 @@
     --pink: #c058f3;
     --violet: #3710bd;
     --purple: #a42395;
+    --purple-rgb: 164, 35, 149;
+
+    --purple-shade: #eca7e4;
+    --purple-shade-rgb: 236, 167, 228;
 
     --white: #fff;
 
@@ -32,12 +36,14 @@
     --bg-gradient-start-highlight: var(--teal);
     --bg-gradient-end-highlight: var(--pink);
 
-    --task-destructive: var(--purple);
+    --destructive-rgb: var(--purple-rgb);
 
     --ff: "Josefin Sans", sans-serif;
     --fw-regular: 400;
     --fw-bold: 700;
     --fs: 1;
+
+    --actions-transition-time: 300ms;
   }
 
   #theme-wrapper[data-theme="light"] {
@@ -54,6 +60,8 @@
 
     --neutral-800: #9495a5;
     --neutral-900: #494c6b;
+
+    --destructive-rgb: var(--purple-shade-rgb);
   }
 
   *:focus-visible {

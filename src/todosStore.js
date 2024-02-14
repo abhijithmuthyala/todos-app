@@ -56,9 +56,14 @@ function clearTodos() {
   localStorage.removeItem(TODOS_LOCAL_STORAGE_KEY);
 }
 
+function setTodos(todos) {
+  localStorage.setItem(TODOS_LOCAL_STORAGE_KEY, JSON.stringify(todos));
+}
+
 export const todosStore = {
   getTodos,
   addTodo,
   updateTodo,
   deleteTodo,
+  setTodos,
 };
