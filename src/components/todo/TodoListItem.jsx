@@ -41,7 +41,7 @@ export default function TodoListItem({ data, updateTodos }) {
   }
 
   return (
-    <li className="flex items-center gap-3 border-b-2 border-neutral-300 px-4 py-3 ">
+    <li className="flex items-center gap-3 border-b-2 border-neutral-300 px-4 py-3">
       <button
         onClick={handleSelect}
         aria-label={`Mark as ${data.done ? "Incomplete" : "Complete"}`}

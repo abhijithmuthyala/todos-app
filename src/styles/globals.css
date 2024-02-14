@@ -39,6 +39,22 @@
     --fw-bold: 700;
     --fs: 1;
   }
+
+  #theme-wrapper[data-theme="light"] {
+    --neutral-100: #ffffff;
+    --neutral-200: #e3e4f1;
+    --neutral-300: #d1d2da;
+
+    /* not specified in the figma design,
+    repeating the colors for now */
+    --neutral-400: #e3e4f1;
+    --neutral-500: #d1d2da;
+    --neutral-600: #9495a5;
+    --neutral-700: #494c6b;
+
+    --neutral-800: #9495a5;
+    --neutral-900: #494c6b;
+  }
 }
 
 @layer utilities {

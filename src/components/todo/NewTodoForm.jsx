@@ -25,7 +25,7 @@ export default function NewTodoForm({ updateTodos }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="flex items-center justify-between gap-x-3 rounded-md bg-neutral-200 px-4">
+      <div className="flex items-center justify-between gap-x-3 rounded-md bg-neutral-200 pl-4">
         <button
           type="submit"
           aria-label="Add todo"
