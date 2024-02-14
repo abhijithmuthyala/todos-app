@@ -1,11 +1,11 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { flushSync } from "react-dom";
 
 import EditTodo from "@/components/todo/EditTodo";
 
 import { todosStore } from "@/todosStore";
-import { flushSync } from "react-dom";
 
 export default function TodoListItem({ data, updateTodos }) {
   const [isEditing, setIsEditing] = useState(false);

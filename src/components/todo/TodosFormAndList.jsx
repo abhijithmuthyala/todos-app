@@ -64,7 +64,7 @@ export default function TodosFormAndList() {
   }
 
   return (
-    <div className="grid -translate-y-20 gap-y-6">
+    <div className="relative -top-20 grid gap-y-6">
       <section>
         <ContentWrapper>
           <NewTodoForm updateTodos={updateTodos} />
