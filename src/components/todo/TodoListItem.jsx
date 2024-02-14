@@ -45,7 +45,7 @@ export default function TodoListItem({ data, updateTodos }) {
       <button
         onClick={handleSelect}
         aria-label={`Mark as ${data.done ? "Incomplete" : "Complete"}`}
-        className={`aspect-square w-5 shrink-0 rounded-full bg-contain bg-center bg-no-repeat ${data.done ? doneTodoStyle : undoneTodoStyle}`}
+        className={`aspect-square w-5 shrink-0 rounded-full bg-center bg-no-repeat ${data.done ? doneTodoStyle : undoneTodoStyle}`}
       ></button>
       {isEditing ? (
         <EditTodo
