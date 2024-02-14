@@ -20,7 +20,7 @@ export default function NewTodoForm({ updateTodos }) {
   }
 
   function handleChange(event) {
-    setTodo(event.target.value.trim());
+    setTodo(event.target.value);
   }
 
   return (
@@ -29,7 +29,7 @@ export default function NewTodoForm({ updateTodos }) {
         <button
           type="submit"
           aria-label="Add todo"
-          className="bg-cross aspect-square w-5 rotate-45 rounded-sm bg-center bg-no-repeat"
+          className="bg-plus aspect-square w-5 rotate-45 rounded-sm bg-center bg-no-repeat"
         ></button>
         <FormControl>
           <label htmlFor="todo" className="sr-only">

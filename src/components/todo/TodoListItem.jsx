@@ -1,13 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import EditTodo from "@/components/todo/EditTodo";
 
 import { todosStore } from "@/todosStore";
+import { flushSync } from "react-dom";
 
 export default function TodoListItem({ data, updateTodos }) {
   const [isEditing, setIsEditing] = useState(false);
+  const inputRef = useRef(null);
 
   const doneTodoStyle = "bg-select";
   const undoneTodoStyle = "outline outline-2 outline-neutral-300";
@@ -22,7 +24,10 @@ export default function TodoListItem({ data, updateTodos }) {
   }
 
   function onEdit() {
-    setIsEditing(true);
+    flushSync(function updateEditState() {
+      setIsEditing(true);
+    });
+    inputRef.current.focus();
   }
 
   function handleSelect() {
@@ -40,16 +45,36 @@ export default function TodoListItem({ data, updateTodos }) {
       <button
         onClick={handleSelect}
         aria-label={`Mark as ${data.done ? "Incomplete" : "Complete"}`}
-        className={`aspect-square w-5 rounded-full bg-center bg-no-repeat ${data.done ? doneTodoStyle : undoneTodoStyle}`}
+        className={`aspect-square w-5 shrink-0 rounded-full bg-contain bg-center bg-no-repeat ${data.done ? doneTodoStyle : undoneTodoStyle}`}
       ></button>
       {isEditing ? (
-        <EditTodo text={data.text} actions={{ onSave, onChange }} />
+        <EditTodo
+          text={data.text}
+          actions={{ onChange, onSave }}
+          ref={inputRef}
+        />
       ) : (
         <p>{data.text}</p>
       )}
-      <div className="ml-auto">
-        <button onClick={handleDeleteTodo}>Delete</button>
-        {!isEditing && <button onClick={onEdit}>Edit</button>}
+      <div className="ml-auto flex items-center gap-4">
+        {isEditing ? (
+          <button
+            onClick={onSave}
+            aria-label="Save changes"
+            className="bg-save aspect-square w-4 bg-contain bg-center bg-no-repeat"
+          ></button>
+        ) : (
+          <button
+            onClick={onEdit}
+            aria-label="Edit task"
+            className="bg-edit aspect-square w-5 bg-contain bg-center bg-no-repeat"
+          ></button>
+        )}
+        <button
+          onClick={handleDeleteTodo}
+          aria-label="Delete task"
+          className="bg-cross aspect-square w-4 bg-contain bg-center bg-no-repeat"
+        ></button>
       </div>
     </li>
   );

@@ -32,6 +32,8 @@
     --bg-gradient-start-highlight: var(--teal);
     --bg-gradient-end-highlight: var(--pink);
 
+    --task-destructive: var(--purple);
+
     --ff: "Josefin Sans", sans-serif;
     --fw-regular: 400;
     --fw-bold: 700;
@@ -48,7 +50,6 @@
         var(--bg-gradient-end-header)
       );
   }
-
   .bg-select {
     background-image: url("/tick.svg"),
       linear-gradient(
@@ -57,13 +58,21 @@
         var(--bg-gradient-end-highlight)
       );
   }
-
-  .bg-cross {
+  .bg-plus {
     background-image: url("/plus.svg"),
       linear-gradient(
         to bottom right,
         var(--bg-gradient-start-highlight),
         var(--bg-gradient-end-highlight)
       );
+  }
+  .bg-cross {
+    background-image: url("/cross.svg");
+  }
+  .bg-edit {
+    background-image: url("/edit.svg");
+  }
+  .bg-save {
+    background-image: url("/save.svg");
   }
 }
