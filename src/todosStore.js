@@ -2,7 +2,7 @@ export const TODOS_LOCAL_STORAGE_KEY = "todos";
 
 let nextId = 0;
 
-{
+if (typeof window !== "undefined") {
   const initialTodos = [
     "Do laundry",
     "Walk dog",
