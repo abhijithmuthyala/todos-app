@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --blue-400: #3a7cfd;
+    --blue-100: #91b6fe;
 
     --teal: #55ddff;
     --pink: #c058f3;
@@ -14,7 +15,6 @@
 
     --purple-shade: #eca7e4;
     --purple-shade-rgb: 236, 167, 228;
-    --violet-shade: #ccbcff;
 
     --white: #fff;
 
@@ -46,7 +46,7 @@
 
     --actions-transition-time: 300ms;
 
-    --active-action-tab-color: var(--violet);
+    --active-action-tab-color: var(--blue-400);
   }
 
   #theme-wrapper[data-theme="light"] {
@@ -65,7 +65,7 @@
     --neutral-900: #494c6b;
 
     --destructive-rgb: var(--purple-shade-rgb);
-    --active-action-tab-color: var(--violet-shade);
+    --active-action-tab-color: var(--blue-100);
   }
 
   *:focus-visible {

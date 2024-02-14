@@ -84,7 +84,7 @@ export default function TodosFormAndList() {
               )}
               <button
                 onClick={clearCompletedTodos}
-                className="rounded-md bg-destructive px-2 py-1 font-bold transition-all duration-actions hover:bg-opacity-75"
+                className="rounded-md bg-destructive px-3 py-1 font-bold transition-all duration-actions hover:bg-opacity-75"
               >
                 Clear completed
               </button>
