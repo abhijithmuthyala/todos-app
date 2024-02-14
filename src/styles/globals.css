@@ -1,3 +1,110 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --blue-400: #3a7cfd;
+    --blue-100: #91b6fe;
+
+    --teal: #55ddff;
+    --pink: #c058f3;
+    --violet: #3710bd;
+    --purple: #a42395;
+    --purple-rgb: 164, 35, 149;
+
+    --purple-shade: #eca7e4;
+    --purple-shade-rgb: 236, 167, 228;
+
+    --white: #fff;
+
+    /* dark mode */
+    --primary: var(--blue-400);
+
+    --neutral-100: #171823;
+    --neutral-200: #25273d;
+    --neutral-300: #393a4b;
+    --neutral-400: #494c6b;
+    --neutral-500: #5b5e7e;
+    --neutral-600: #4d5067;
+    --neutral-700: #767992;
+    --neutral-800: #c8cbe7;
+    --neutral-900: #e3e4f1;
+
+    --bg-gradient-start-header: var(--violet);
+    --bg-gradient-end-header: var(--purple);
+
+    --bg-gradient-start-highlight: var(--teal);
+    --bg-gradient-end-highlight: var(--pink);
+
+    --destructive-rgb: var(--purple-rgb);
+
+    --ff: "Josefin Sans", sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fs: 1;
+
+    --actions-transition-time: 300ms;
+
+    --active-action-tab-color: var(--blue-400);
+  }
+
+  #theme-wrapper[data-theme="light"] {
+    --neutral-100: #ffffff;
+    --neutral-200: #e3e4f1;
+    --neutral-300: #d1d2da;
+
+    /* not specified in the figma design,
+    repeating the colors for now */
+    --neutral-400: #e3e4f1;
+    --neutral-500: #d1d2da;
+    --neutral-600: #9495a5;
+    --neutral-700: #494c6b;
+
+    --neutral-800: #9495a5;
+    --neutral-900: #494c6b;
+
+    --destructive-rgb: var(--purple-shade-rgb);
+    --active-action-tab-color: var(--blue-100);
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--neutral-900) !important;
+  }
+}
+
+@layer utilities {
+  .bg-hero {
+    background-image: url("/images/hero.jpg"),
+      linear-gradient(
+        to bottom right,
+        var(--bg-gradient-start-header),
+        var(--bg-gradient-end-header)
+      );
+  }
+  .bg-select {
+    background-image: url("/tick.svg"),
+      linear-gradient(
+        to bottom right,
+        var(--bg-gradient-start-highlight),
+        var(--bg-gradient-end-highlight)
+      );
+  }
+  .bg-plus {
+    background-image: url("/plus.svg"),
+      linear-gradient(
+        to bottom right,
+        var(--bg-gradient-start-highlight),
+        var(--bg-gradient-end-highlight)
+      );
+  }
+  .bg-cross {
+    background-image: url("/cross.svg");
+  }
+  .bg-edit {
+    background-image: url("/edit.svg");
+  }
+  .bg-save {
+    background-image: url("/save.svg");
+  }
+}
