@@ -30,9 +30,10 @@ module.exports = {
       "highlight-end": "var(--bg-gradient-end-highlight)",
     },
     extend: {
-      backgroundImage: {
-        hero: "hero",
-      },
+      backgroundImage: {},
+    },
+    fontFamily: {
+      "josefin-sans": "var(--ff)",
     },
   },
   plugins: [],
