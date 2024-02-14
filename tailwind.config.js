@@ -27,9 +27,12 @@ module.exports = {
       white: "var(--white)",
       transparent: "transparent",
       inherit: "inherit",
+
+      // actions
       destructive({ opacityValue }) {
         return withOpacity(opacityValue, "destructive-rgb");
       },
+      "active-action-tab": "var(--active-action-tab-color)",
     },
     gradientColorStops: {
       "header-start": "var(--bg-gradient-start-header)",
