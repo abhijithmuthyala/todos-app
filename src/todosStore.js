@@ -2,7 +2,7 @@ export const TODOS_LOCAL_STORAGE_KEY = "todos";
 
 let nextId = 0;
 
-if (typeof window !== "undefined") {
+function initLocalStorage() {
   const initialTodos = [
     "Do laundry",
     "Walk dog",
@@ -12,6 +12,13 @@ if (typeof window !== "undefined") {
   ];
   clearTodos();
   initialTodos.forEach(addTodo);
+}
+
+if (
+  typeof window !== "undefined" &&
+  !localStorage.getItem(TODOS_LOCAL_STORAGE_KEY)
+) {
+  initLocalStorage();
 }
 
 function getTodos() {
