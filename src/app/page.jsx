@@ -22,3 +22,9 @@ export default async function Home() {
     </>
   );
 }
+
+export const metadata = {
+  title: "Todo App",
+  description:
+    "Manage your tasks with a simple interface and boost your productivity",
+};

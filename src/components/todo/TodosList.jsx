@@ -47,14 +47,15 @@ function DraggableTodoListItem({ data, index, updateTodos }) {
     <Draggable draggableId={String(data.id)} index={index}>
       {function renderDraggableTodoListItem(provided) {
         return (
-          <div
+          <li
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
             tabIndex={-1}
+            role="listitem" // dnd sets it as a btn, but we want it to be a list item
           >
             <TodoListItem data={data} updateTodos={updateTodos} index={index} />
-          </div>
+          </li>
         );
       }}
     </Draggable>
