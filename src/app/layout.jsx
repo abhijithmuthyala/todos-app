@@ -13,7 +13,7 @@ const font = Josefin_Sans({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={font.className}>
+    <html lang="en" className={`${font.className} overflow-y-scroll`}>
       <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
