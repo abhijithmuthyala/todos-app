@@ -27,7 +27,7 @@ export default function TodoListItem({ data, updateTodos, index, children }) {
 
   const revealStyle = revealStyles[Number(reveal)];
   const doneTodoStyle = "bg-select";
-  const undoneTodoStyle = "shadow-select";
+  const undoneTodoStyle = "shadow-select focus-visible:bg-neutral-500";
 
   function onChange(text) {
     const newTodos = todosStore.updateTodo(data.id, "text", text);

@@ -39,7 +39,7 @@
 
     --destructive-rgb: var(--purple-rgb);
 
-    --shadow-select: 0 0 0 2px var(--neutral-400);
+    --shadow-select-color: 0 0 0 2px var(--neutral-400);
 
     --ff: "Josefin Sans", sans-serif;
     --fw-regular: 400;
@@ -74,10 +74,6 @@
 
     --destructive-rgb: var(--purple-shade-rgb);
     --active-action-tab-color: var(--blue-100);
-  }
-
-  *:focus-visible {
-    outline: 2px solid var(--neutral-900);
   }
 }
 
@@ -114,5 +110,9 @@
   }
   .bg-save {
     background-image: url("/save.svg");
+  }
+
+  .shadow-select {
+    box-shadow: 0 0 2px 2px var(--neutral-600);
   }
 }
