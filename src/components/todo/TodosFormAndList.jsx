@@ -114,6 +114,9 @@ export default function TodosFormAndList() {
               </button>
             </div>
           </div>
+          <p className="mt-12 text-center text-neutral-700">
+            Drag and drop to reorder list
+          </p>
         </ContentWrapper>
       </section>
     </div>
