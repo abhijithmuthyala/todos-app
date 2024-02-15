@@ -55,6 +55,8 @@
     --body-padding: 24px;
     --content-max-width: calc(540px + 2 * var(--body-padding));
     --list-container-max-height: 30rem;
+
+    --hero-image-path: url("/images/hero.jpg");
   }
 
   #theme-wrapper[data-theme="light"] {
@@ -74,12 +76,14 @@
 
     --destructive-rgb: var(--purple-shade-rgb);
     --active-action-tab-color: var(--blue-100);
+
+    --hero-image-path: url("/images/hero-light.jpg");
   }
 }
 
 @layer utilities {
   .bg-hero {
-    background-image: url("/images/hero.jpg"),
+    background-image: var(--hero-image-path),
       linear-gradient(
         to bottom right,
         var(--bg-gradient-start-header),
