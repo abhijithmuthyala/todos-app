@@ -64,7 +64,7 @@ export default function TodosFormAndList() {
   }
 
   return (
-    <div className="relative -top-20 grid gap-y-6">
+    <div className="relative -top-22 grid gap-y-4 md:-top-36">
       <section>
         <ContentWrapper>
           <NewTodoForm updateTodos={updateTodos} />
@@ -72,27 +72,8 @@ export default function TodosFormAndList() {
       </section>
       <section>
         <ContentWrapper>
-          <div className="mb-3 overflow-hidden rounded-md bg-neutral-200">
-            <h2 className="sr-only">List of your todos</h2>
-            <TodosList updateTodos={updateTodos} todos={filteredTodos} />
-            <div className="flex flex-wrap items-center justify-between gap-x-3  bg-neutral-200 px-4 py-4">
-              {todosFilter !== filterStates.completed && (
-                <p>{undoneTodos} tasks left</p>
-              )}
-              {todosFilter === filterStates.completed && (
-                <p>{doneTodos} tasks done</p>
-              )}
-              <button
-                onClick={clearCompletedTodos}
-                className="rounded-md bg-destructive px-3 py-1 font-bold transition-all duration-actions hover:bg-opacity-75"
-              >
-                Clear completed
-              </button>
-            </div>
-          </div>
-
           {/* filters */}
-          <div className="flex flex-wrap items-center justify-center gap-3 rounded-md bg-neutral-200 px-4 py-3">
+          <div className="mb-3 flex min-h-12 flex-wrap items-center justify-center gap-3 rounded-md bg-neutral-200 px-3 py-4">
             <TabButton
               onClick={handleFilterChange}
               data-filter={filterStates.all}
@@ -114,6 +95,24 @@ export default function TodosFormAndList() {
             >
               Completed
             </TabButton>
+          </div>
+          <div className="overflow-hidden rounded-md bg-neutral-200">
+            <h2 className="sr-only">List of your todos</h2>
+            <TodosList updateTodos={updateTodos} todos={filteredTodos} />
+            <div className="flex flex-wrap items-center justify-between gap-x-3  bg-neutral-200 px-5 py-4 sm:px-6">
+              {todosFilter !== filterStates.completed && (
+                <p>{undoneTodos} tasks left</p>
+              )}
+              {todosFilter === filterStates.completed && (
+                <p>{doneTodos} tasks done</p>
+              )}
+              <button
+                onClick={clearCompletedTodos}
+                className="rounded-md bg-destructive px-3 py-1 font-bold transition-all duration-actions hover:bg-opacity-75"
+              >
+                Clear completed
+              </button>
+            </div>
           </div>
         </ContentWrapper>
       </section>

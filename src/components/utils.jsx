@@ -1,5 +1,9 @@
 export function ContentWrapper({ children }) {
-  return <div className="mx-auto max-w-2xl px-6">{children}</div>;
+  return (
+    <div className="mx-auto flow-root max-w-content-max-width px-body-padding">
+      {children}
+    </div>
+  );
 }
 
 export function ThemeIconLight({ size = 20 }) {

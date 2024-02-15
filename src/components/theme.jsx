@@ -18,7 +18,7 @@ export function ThemeProvider({ children }) {
       <div
         id="theme-wrapper"
         data-theme={theme}
-        className="min-h-screen bg-neutral-100 font-josefin-sans text-sm text-neutral-900"
+        className="min-h-screen bg-neutral-100 font-josefin-sans text-sm text-neutral-900 md:text-base"
       >
         {children}
       </div>
