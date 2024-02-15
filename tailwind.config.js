@@ -46,16 +46,17 @@ module.exports = {
         "hero-desktop": "var(--hero-min-height-desktop)",
         "content-max-width": "var(--content-max-width)",
         "body-padding": "var(--body-padding)",
+        "list-max-height": "var(--list-container-max-height)",
         22: "5.75rem",
         13: "3.25rem",
         18: "4.375rem",
       },
+      transitionDuration: {
+        actions: "var(--actions-transition-time)",
+      },
     },
     fontFamily: {
       "josefin-sans": "var(--ff)",
-    },
-    transitionDuration: {
-      actions: "var(--actions-transition-time)",
     },
   },
   plugins: [],

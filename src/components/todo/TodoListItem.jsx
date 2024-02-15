@@ -6,11 +6,26 @@ import { flushSync } from "react-dom";
 import EditTodo from "@/components/todo/EditTodo";
 
 import { todosStore } from "@/todosStore";
+import { useReveal } from "./hooks";
 
-export default function TodoListItem({ data, updateTodos }) {
+const revealStyles = {
+  0: "opacity-0 -translate-y-4",
+  1: "opacity-100 translate-y-0",
+};
+
+/*
+TODO:
+this should ideally be a css custom prop, but how to
+integrate css prop with tailwind to make the dalay work?
+*/
+const transitionDelay = 150;
+
+export default function TodoListItem({ data, updateTodos, index }) {
   const [isEditing, setIsEditing] = useState(false);
+  const reveal = useReveal();
   const inputRef = useRef(null);
 
+  const revealStyle = revealStyles[Number(reveal)];
   const doneTodoStyle = "bg-select";
   const undoneTodoStyle = "outline outline-2 outline-neutral-300";
 
@@ -41,7 +56,12 @@ export default function TodoListItem({ data, updateTodos }) {
   }
 
   return (
-    <li className="flex min-h-13 items-center gap-3 border-b-2 border-neutral-300 px-5 py-4 sm:min-h-16 sm:px-6">
+    <li
+      className={`flex min-h-13 -translate-y-3 items-center gap-3 border-b-2 border-neutral-300 px-5 py-4 transition-all duration-200 ease-in sm:min-h-16 sm:px-6 ${revealStyle}`}
+      style={{
+        transitionDelay: index * transitionDelay + "ms",
+      }}
+    >
       <button
         onClick={handleSelect}
         aria-label={`Mark as ${data.done ? "Incomplete" : "Complete"}`}

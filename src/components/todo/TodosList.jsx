@@ -53,7 +53,7 @@ function DraggableTodoListItem({ data, index, updateTodos }) {
             {...provided.dragHandleProps}
             tabIndex={-1}
           >
-            <TodoListItem data={data} updateTodos={updateTodos} />
+            <TodoListItem data={data} updateTodos={updateTodos} index={index} />
           </div>
         );
       }}

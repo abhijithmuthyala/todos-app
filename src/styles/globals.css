@@ -52,6 +52,7 @@
     --hero-min-height-desktop: 300px;
     --body-padding: 24px;
     --content-max-width: calc(540px + 2 * var(--body-padding));
+    --list-container-max-height: 30rem;
   }
 
   #theme-wrapper[data-theme="light"] {
