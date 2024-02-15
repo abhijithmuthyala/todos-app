@@ -54,6 +54,9 @@ module.exports = {
       transitionDuration: {
         actions: "var(--actions-transition-time)",
       },
+      boxShadow: {
+        select: "var(--shadow-select)",
+      },
     },
     fontFamily: {
       "josefin-sans": "var(--ff)",

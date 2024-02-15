@@ -41,7 +41,7 @@ export default function NewTodoForm({ updateTodos }) {
             placeholder="Create a new todo..."
             value={todo}
             onChange={handleChange}
-            className="w-full bg-transparent py-2 placeholder:text-neutral-700"
+            className="w-full bg-transparent py-2 placeholder:text-neutral-700 focus-visible:outline-none"
           />
         </FormControl>
       </div>
