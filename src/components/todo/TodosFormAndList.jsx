@@ -33,7 +33,8 @@ export default function TodosFormAndList() {
   const [todos, setTodos] = useTodos();
   const [todosFilter, setTodosFilter] = useState(filterStates.all);
 
-  const filteredTodos = todos.filter(filters[todosFilter]);
+  // const filteredTodos = todos.filter(filters[todosFilter]);
+  const filterFn = filters[todosFilter];
   const undoneTodos = todos.reduce(function completedTodosCountReducer(
     count,
     todo,
@@ -98,7 +99,11 @@ export default function TodosFormAndList() {
           </div>
           <div className="overflow-hidden rounded-md bg-neutral-200">
             <h2 className="sr-only">List of your todos</h2>
-            <TodosList updateTodos={updateTodos} todos={filteredTodos} />
+            <TodosList
+              updateTodos={updateTodos}
+              todos={todos}
+              filterFn={filterFn}
+            />
             <div className="flex flex-wrap items-center justify-between gap-x-3  bg-neutral-200 px-5 py-4 sm:px-6">
               {todosFilter !== filterStates.completed && (
                 <p>{undoneTodos} tasks left</p>
