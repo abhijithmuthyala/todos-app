@@ -47,6 +47,9 @@
     --actions-transition-time: 300ms;
 
     --active-action-tab-color: var(--blue-400);
+
+    --hero-min-height-mobile: 200px;
+    --hero-min-height-desktop: 200px;
   }
 
   #theme-wrapper[data-theme="light"] {

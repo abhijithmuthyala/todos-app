@@ -64,7 +64,7 @@ export default function TodosFormAndList() {
   }
 
   return (
-    <div className="relative -top-20 grid gap-y-6">
+    <div className="relative -top-22 grid gap-y-4">
       <section>
         <ContentWrapper>
           <NewTodoForm updateTodos={updateTodos} />
@@ -92,7 +92,7 @@ export default function TodosFormAndList() {
           </div>
 
           {/* filters */}
-          <div className="flex flex-wrap items-center justify-center gap-3 rounded-md bg-neutral-200 px-4 py-3">
+          <div className="flex min-h-12 flex-wrap items-center justify-center gap-3 rounded-md bg-neutral-200 px-3 py-4">
             <TabButton
               onClick={handleFilterChange}
               data-filter={filterStates.all}

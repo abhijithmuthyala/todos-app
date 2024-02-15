@@ -41,7 +41,12 @@ module.exports = {
       "highlight-end": "var(--bg-gradient-end-highlight)",
     },
     extend: {
-      backgroundImage: {},
+      spacing: {
+        "hero-mobile": "var(--hero-min-height-mobile)",
+        "hero-desktop": "var(--hero-min-height-desktop)",
+        22: "5.75rem",
+        13: "3.25rem",
+      },
     },
     fontFamily: {
       "josefin-sans": "var(--ff)",

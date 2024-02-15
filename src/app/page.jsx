@@ -6,7 +6,7 @@ export default async function Home() {
   return (
     <>
       <main>
-        <header className="min-h-48 bg-hero bg-blend-multiply">
+        <header className="bg-hero min-h-hero-mobile bg-blend-multiply">
           <ContentWrapper>
             <h1 className="sr-only uppercase">
               Manage your tasks with a simple interface
