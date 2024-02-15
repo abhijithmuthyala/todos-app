@@ -27,7 +27,7 @@ export default function TodoListItem({ data, updateTodos, index, children }) {
 
   const revealStyle = revealStyles[Number(reveal)];
   const doneTodoStyle = "bg-select";
-  const undoneTodoStyle = "outline outline-2 outline-neutral-300";
+  const undoneTodoStyle = "shadow-select";
 
   function onChange(text) {
     const newTodos = todosStore.updateTodo(data.id, "text", text);
@@ -57,7 +57,7 @@ export default function TodoListItem({ data, updateTodos, index, children }) {
 
   return (
     <div
-      className={`flex min-h-13 -translate-y-3 items-center gap-3 border-b-2 border-neutral-300 px-5 py-4 transition-all duration-200 ease-in sm:min-h-16 sm:px-6 ${revealStyle}`}
+      className={`flex min-h-13 -translate-y-3 items-center gap-3 border-b-2 border-neutral-300 px-5 py-4 transition-all duration-200 ease-in sm:min-h-16 sm:px-6 ${revealStyle} `}
       style={{
         transitionDelay: index * transitionDelay + "ms",
       }}

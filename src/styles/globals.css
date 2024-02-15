@@ -39,6 +39,8 @@
 
     --destructive-rgb: var(--purple-rgb);
 
+    --shadow-select: 0 0 0 2px var(--neutral-400);
+
     --ff: "Josefin Sans", sans-serif;
     --fw-regular: 400;
     --fw-bold: 700;
@@ -75,7 +77,7 @@
   }
 
   *:focus-visible {
-    outline: 2px solid var(--neutral-900) !important;
+    outline: 2px solid var(--neutral-900);
   }
 }
 
