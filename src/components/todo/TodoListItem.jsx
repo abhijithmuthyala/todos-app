@@ -20,7 +20,7 @@ integrate css prop with tailwind to make the dalay work?
 */
 const transitionDelay = 150;
 
-export default function TodoListItem({ data, updateTodos, index }) {
+export default function TodoListItem({ data, updateTodos, index, children }) {
   const [isEditing, setIsEditing] = useState(false);
   const reveal = useReveal();
   const inputRef = useRef(null);
@@ -56,12 +56,13 @@ export default function TodoListItem({ data, updateTodos, index }) {
   }
 
   return (
-    <li
+    <div
       className={`flex min-h-13 -translate-y-3 items-center gap-3 border-b-2 border-neutral-300 px-5 py-4 transition-all duration-200 ease-in sm:min-h-16 sm:px-6 ${revealStyle}`}
       style={{
         transitionDelay: index * transitionDelay + "ms",
       }}
     >
+      {children}
       <button
         onClick={handleSelect}
         aria-label={`Mark as ${data.done ? "Incomplete" : "Complete"}`}
@@ -96,6 +97,6 @@ export default function TodoListItem({ data, updateTodos, index }) {
           className="bg-cross aspect-square w-4 bg-contain bg-center bg-no-repeat"
         ></button>
       </div>
-    </li>
+    </div>
   );
 }
