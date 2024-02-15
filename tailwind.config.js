@@ -44,8 +44,11 @@ module.exports = {
       spacing: {
         "hero-mobile": "var(--hero-min-height-mobile)",
         "hero-desktop": "var(--hero-min-height-desktop)",
+        "content-max-width": "var(--content-max-width)",
+        "body-padding": "var(--body-padding)",
         22: "5.75rem",
         13: "3.25rem",
+        18: "4.375rem",
       },
     },
     fontFamily: {

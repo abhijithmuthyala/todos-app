@@ -64,7 +64,7 @@ export default function TodosFormAndList() {
   }
 
   return (
-    <div className="relative -top-22 grid gap-y-4">
+    <div className="relative -top-22 grid gap-y-4 md:-top-36">
       <section>
         <ContentWrapper>
           <NewTodoForm updateTodos={updateTodos} />
@@ -75,7 +75,7 @@ export default function TodosFormAndList() {
           <div className="mb-3 overflow-hidden rounded-md bg-neutral-200">
             <h2 className="sr-only">List of your todos</h2>
             <TodosList updateTodos={updateTodos} todos={filteredTodos} />
-            <div className="flex flex-wrap items-center justify-between gap-x-3  bg-neutral-200 px-4 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-x-3  bg-neutral-200 px-5 py-4 sm:px-6">
               {todosFilter !== filterStates.completed && (
                 <p>{undoneTodos} tasks left</p>
               )}

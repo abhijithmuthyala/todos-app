@@ -6,12 +6,12 @@ export default async function Home() {
   return (
     <>
       <main>
-        <header className="bg-hero min-h-hero-mobile bg-blend-multiply">
+        <header className="bg-hero min-h-hero-mobile bg-cover bg-no-repeat bg-blend-multiply md:min-h-hero-desktop">
           <ContentWrapper>
             <h1 className="sr-only uppercase">
               Manage your tasks with a simple interface
             </h1>
-            <div className="flex items-center justify-between py-12">
+            <div className="my-12 flex items-center justify-between sm:min-h-10 md:my-18">
               <Logo />
               <ToggleThemeButton />
             </div>

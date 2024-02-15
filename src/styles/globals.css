@@ -49,7 +49,9 @@
     --active-action-tab-color: var(--blue-400);
 
     --hero-min-height-mobile: 200px;
-    --hero-min-height-desktop: 200px;
+    --hero-min-height-desktop: 300px;
+    --body-padding: 24px;
+    --content-max-width: calc(540px + 2 * var(--body-padding));
   }
 
   #theme-wrapper[data-theme="light"] {
